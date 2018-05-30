@@ -33,27 +33,17 @@
 
 <script>
     import moment from 'moment'
+    import Vue from 'vue'
 
-     const Vuetable = (resolve) => import(/* webpackChunkName: "vuetable" */ 'vuetable-2').then( item => {
-         resolve(item.Vuetable)
-     });
+    import {Vuetable, VuetablePagination, VuetablePaginationInfo} from 'vuetable-2';
 
-    const VuetablePagination = (resolve) => import(/* webpackChunkName: "vuetable-pagination" */ 'vuetable-2').then( item => {
-        resolve(item.VuetablePagination)
-    });
+    import FilterBar from './FilterBar';
+    import CustomActions from './Actions.vue';
+    import DetailRow from './DetailRow.vue';
 
-    const VuetablePaginationInfo = (resolve) => import(/* webpackChunkName: "vuetable-pagination-info" */ 'vuetable-2').then( item => {
-        resolve(item.VuetablePaginationInfo)
-    });
+    Vue.component('custom-actions', CustomActions);
 
-    const FilterBar = (resolve) => import(/* webpackChunkName: "filter-bar" */ './FilterBar')
-
-    Vue.component('custom-actions', (resolve) => {
-        /* webpackChunkName: "custom-actions" */
-        require(['./Actions.vue'], resolve)
-    });
-
-    Vue.component('detail-row', () => import(/* webpackChunkName: "detail-row" */ './DetailRow'));
+    Vue.component('detail-row', DetailRow);
 
     export default {
         components: {

@@ -10,27 +10,16 @@ require('./bootstrap');
 window.Vue = require('vue');
 import VueRouter from 'vue-router'
 import VueContentPlaceholders from 'vue-content-placeholders'
-
 import VueEvents from 'vue-events'
 Vue.use(VueEvents);
 Vue.use(VueContentPlaceholders);
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 import VueTablePlaceholder from './components/placeholder/VuetablePlaceholder.vue'
-
-/** Vue 2.3.0+ */
-const VueTable = (resolve) => ({
-        component: import(/* webpackChunkName: "my-vuetable" */ './components/vuetable/Vuetable.vue'),
-        loading: VueTablePlaceholder,
-        delay: 200,
-        timeout: 3000
-});
-
-const Home = () => import(/* webpackChunkName: "home" */ './components/Home.vue');
-
-const Bar = () => import(/* webpackChunkName: "bar-chart" */ './components/chart/BarChart.vue');
-
-const Tab = () => import(/* webpackChunkName: "tab" */ './components/tab/Tab.vue')
+import VueTable from './components/vuetable/Vuetable.vue';
+import Bar from './components/chart/BarChart.vue';
+import Tab from './components/tab/Tab.vue';
+import Home from './components/Home.vue'
 
 const routes = [
     { path: '/', component: Home },

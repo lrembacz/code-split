@@ -5,7 +5,7 @@
 
 <script>
 
-     const Bar = () => import(/* webpackChunkName: "bar" */ './Bar.js');
+     import Bar from './Bar.js'
 
     export default {
         components: {
