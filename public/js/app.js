@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "js/" + ({"0":"my-vuetable","1":"tab","2":"bar-chart","3":"vuetable","4":"bar","5":"filter-bar","7":"detail-row","8":"tab-posts","9":"tab-archive"}[chunkId]||chunkId) + "." + {"0":"27b0d9b01b44e2c2a45f","1":"574f12d12069484de1f3","2":"748327c49591e19d092a","3":"8fec54ed48a38c924037","4":"5f77c7518425f9666bad","5":"0ef91b89e6ab8d45f496","6":"aca3a0c0ca3766787d4d","7":"e9d7b8218e520f2795a7","8":"d243dfc05704ea860cd3","9":"de765314d673d170e139"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "js/" + ({"0":"my-vuetable","1":"tab","2":"bar-chart","3":"vuetable","4":"bar","5":"filter-bar","7":"detail-row","8":"tab-posts","9":"tab-archive"}[chunkId]||chunkId) + "." + {"0":"27b0d9b01b44e2c2a45f","1":"0f2e79d171acb8465592","2":"748327c49591e19d092a","3":"8fec54ed48a38c924037","4":"5f77c7518425f9666bad","5":"0ef91b89e6ab8d45f496","6":"aca3a0c0ca3766787d4d","7":"e9d7b8218e520f2795a7","8":"d243dfc05704ea860cd3","9":"de765314d673d170e139"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {

@@ -135,7 +135,7 @@ var render = function() {
         return _c(
           "button",
           {
-            key: tab,
+            key: tab + "1",
             class: ["tab-button", { active: _vm.currentTab === tab }],
             on: {
               click: function($event) {
@@ -159,7 +159,7 @@ var render = function() {
         return _c(
           "button",
           {
-            key: tab,
+            key: tab + "2",
             class: ["tab-button", { active: _vm.currentTab2 === tab }],
             on: {
               click: function($event) {
