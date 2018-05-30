@@ -1,3 +1,3 @@
 # Code Split SPA
 
-Single Page Application Async Part
+Single Page Application One JS File Part
