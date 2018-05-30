@@ -10,31 +10,23 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import VueContentPlaceholders from 'vue-content-placeholders'
-
 import VueEvents from 'vue-events'
 Vue.use(VueEvents);
 Vue.use(VueContentPlaceholders);
 
 import VueTablePlaceholder from './components/placeholder/VuetablePlaceholder.vue'
+import VueTable from './components/vuetable/Vuetable.vue';
+import BarChart from './components/chart/BarChart.vue';
+import Tab from './components/tab/Tab.vue';
 
-/** Vue 2.3.0+ */
-const VueTable = (resolve) => ({
-        component: import(/* webpackChunkName: "my-vuetable" */ './components/vuetable/Vuetable.vue'),
-        loading: VueTablePlaceholder,
-        delay: 0,
-        timeout: 3000
+const app = new Vue({
+    el: '#app',
+    components: {
+        'vuetable': VueTable,
+        'vuetable-placeholder': VueTablePlaceholder,
+        'bar-chart': BarChart,
+        'tab': Tab
+
+    }
 });
-
-if (document.getElementById('app')) {
-    const app = new Vue({
-        el: '#app',
-        components: {
-            'vuetable': VueTable,
-            'vuetable-placeholder': VueTablePlaceholder,
-            'bar-chart': () => import(/* webpackChunkName: "bar-chart" */ './components/chart/BarChart.vue'),
-            'tab': () => import(/* webpackChunkName: "tab" */ './components/tab/Tab.vue')
-
-        }
-    });
-}
 

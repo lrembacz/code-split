@@ -37,8 +37,8 @@
 
 <script>
 
-    const TabPosts = () => import(/* webpackChunkName: "tab-posts" */'./TabPosts.vue')
-    const TabArchive = () => import(/* webpackChunkName: "tab-archive" */'./TabArchive.vue')
+    import TabPosts from './TabPosts.vue'
+    import TabArchive from './TabArchive.vue'
 
     export default  {
         components: {
