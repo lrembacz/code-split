@@ -1,3 +1,3 @@
-# Code Split MPA
+# Code Split SPA
 
-Multi Page Application Part
+Single Page Application Async Part

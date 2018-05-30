@@ -8,12 +8,13 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-
+import VueRouter from 'vue-router'
 import VueContentPlaceholders from 'vue-content-placeholders'
 
 import VueEvents from 'vue-events'
 Vue.use(VueEvents);
 Vue.use(VueContentPlaceholders);
+Vue.use(VueRouter)
 
 import VueTablePlaceholder from './components/placeholder/VuetablePlaceholder.vue'
 
@@ -21,19 +22,35 @@ import VueTablePlaceholder from './components/placeholder/VuetablePlaceholder.vu
 const VueTable = (resolve) => ({
         component: import(/* webpackChunkName: "my-vuetable" */ './components/vuetable/Vuetable.vue'),
         loading: VueTablePlaceholder,
-        delay: 0,
+        delay: 200,
         timeout: 3000
 });
+
+const Home = () => import(/* webpackChunkName: "home" */ './components/Home.vue');
+
+const Bar = () => import(/* webpackChunkName: "bar-chart" */ './components/chart/BarChart.vue');
+
+const Tab = () => import(/* webpackChunkName: "tab" */ './components/tab/Tab.vue')
+
+const routes = [
+    { path: '/', component: Home },
+    { path: '/vuetable', component: VueTable },
+    { path: '/bar-chart', component: Bar },
+    { path: '/tab', component: Tab}
+];
+
+const router = new VueRouter({
+    routes,
+    mode : 'history'
+})
+
 
 if (document.getElementById('app')) {
     const app = new Vue({
         el: '#app',
+        router,
         components: {
-            'vuetable': VueTable,
             'vuetable-placeholder': VueTablePlaceholder,
-            'bar-chart': () => import(/* webpackChunkName: "bar-chart" */ './components/chart/BarChart.vue'),
-            'tab': () => import(/* webpackChunkName: "tab" */ './components/tab/Tab.vue')
-
         }
     });
 }

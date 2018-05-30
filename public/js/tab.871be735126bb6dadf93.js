@@ -1,12 +1,12 @@
 webpackJsonp([1],{
 
-/***/ 267:
+/***/ 271:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(268);
+var content = __webpack_require__(272);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -27,7 +27,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 268:
+/***/ 272:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -42,7 +42,7 @@ exports.push([module.i, "\n.tab-button {\n    padding: 6px 10px;\n    border-top
 
 /***/ }),
 
-/***/ 269:
+/***/ 273:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -87,10 +87,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 var TabPosts = function TabPosts() {
-    return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, 270));
+    return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 274));
 };
 var TabArchive = function TabArchive() {
-    return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, 273));
+    return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, 277));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -118,7 +118,7 @@ var TabArchive = function TabArchive() {
 
 /***/ }),
 
-/***/ 276:
+/***/ 280:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -135,7 +135,7 @@ var render = function() {
         return _c(
           "button",
           {
-            key: tab,
+            key: tab + "1",
             class: ["tab-button", { active: _vm.currentTab === tab }],
             on: {
               click: function($event) {
@@ -159,7 +159,7 @@ var render = function() {
         return _c(
           "button",
           {
-            key: tab,
+            key: tab + "2",
             class: ["tab-button", { active: _vm.currentTab2 === tab }],
             on: {
               click: function($event) {
@@ -188,19 +188,19 @@ if (false) {
 
 /***/ }),
 
-/***/ 58:
+/***/ 60:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(267)
+  __webpack_require__(271)
 }
 var normalizeComponent = __webpack_require__(13)
 /* script */
-var __vue_script__ = __webpack_require__(269)
+var __vue_script__ = __webpack_require__(273)
 /* template */
-var __vue_template__ = __webpack_require__(276)
+var __vue_template__ = __webpack_require__(280)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
