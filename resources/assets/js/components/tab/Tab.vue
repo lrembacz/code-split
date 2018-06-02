@@ -5,7 +5,7 @@
 
             <button
                     v-for="tab in tabs"
-                    v-bind:key="tab"
+                    v-bind:key="tab+'1'"
                     v-bind:class="['tab-button', { active: currentTab === tab }]"
                     v-on:click="currentTab = tab"
             >{{ tab }}</button>
@@ -22,7 +22,7 @@
 
             <button
                     v-for="tab in tabs"
-                    v-bind:key="tab"
+                    v-bind:key="tab+'2'"
                     v-bind:class="['tab-button', { active: currentTab2 === tab }]"
                     v-on:click="currentTab2 = tab"
             >{{ tab }}</button>
